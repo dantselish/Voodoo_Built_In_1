@@ -1977,6 +1977,14 @@ PrefabInstance:
       propertyPath: m_text
       value: x200
       objectReference: {fileID: 0}
+    - target: {fileID: 3834877319475927350, guid: 936e5159858a3684a81f3c4ea5bb71da, type: 3}
+      propertyPath: m_fontSize
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834877319475927350, guid: 936e5159858a3684a81f3c4ea5bb71da, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 5.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6205589829556112716, guid: 936e5159858a3684a81f3c4ea5bb71da, type: 3}
       propertyPath: multiplier
       value: 200
@@ -2396,7 +2404,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206843011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3098,7 +3106,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9529412, g: 0.85882354, b: 0.07058824, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3518,7 +3526,7 @@ Transform:
   m_GameObject: {fileID: 1621370943}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6688964, y: 2.3763973e-15, z: 0}
+  m_LocalPosition: {x: -0.67, y: 2.3763973e-15, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4210,7 +4218,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816617397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4664,6 +4672,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 893535074099866772, guid: 1a5a02fd45466654cb15c19cdfea8048, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4415676032474699907, guid: 1a5a02fd45466654cb15c19cdfea8048, type: 3}
       propertyPath: m_Name
       value: BridgePiece
@@ -4706,6 +4718,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4679065408205744049, guid: 1a5a02fd45466654cb15c19cdfea8048, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149394384138178782, guid: 1a5a02fd45466654cb15c19cdfea8048, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
