@@ -108,7 +108,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2752924707770838011, guid: 36127d7be17bba442ad9411416447487, type: 3}
   animator: {fileID: 3187718248176731605}
   maxHp: 45
-  enemiesInWave: 7
+  enemiesInWave: 13
   waveInterval: 2
 --- !u!65 &5533665876052077529
 BoxCollider:
@@ -173,6 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294104719885604387}
   - component: {fileID: 4330095268355324274}
+  - component: {fileID: 6518529144253510127}
   m_Layer: 0
   m_Name: 3D_EnemyBase_NEW
   m_TagString: Untagged
@@ -218,7 +219,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5d19a0e1f1bdda408bd0dfc267a3e93, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,6 +257,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000016119331, y: -0.00041692564, z: 0.010493801}
     m_Extent: {x: 0.005785848, y: 0.0062742545, z: 0.01025447}
   m_DirtyAABB: 0
+--- !u!114 &6518529144253510127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730494951082633541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fb2c5f145047846ac8e94ce0994dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currRenderer: {fileID: 4330095268355324274}
 --- !u!1 &2902043677274840038
 GameObject:
   m_ObjectHideFlags: 0
