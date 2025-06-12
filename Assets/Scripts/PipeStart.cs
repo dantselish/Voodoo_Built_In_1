@@ -1,9 +1,19 @@
+using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class PipeStart : MonoBehaviour
 {
     [SerializeField] private PipeEnd pipeEnd;
 
+    private Sequence sequence;
+    private Vector3 startScale;
+
+
+    private void Awake()
+    {
+        startScale = transform.localScale;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,5 +31,20 @@ public class PipeStart : MonoBehaviour
 
         normie.gameObject.SetActive(false);
         pipeEnd.AddToEnd(normie);
+        HandleTween();
+    }
+
+    private void HandleTween()
+    {
+        if (sequence.IsActive())
+        {
+            sequence.Kill();
+            transform.localScale = startScale;
+        }
+
+        sequence = DOTween.Sequence();
+        sequence.SetLoops(2, LoopType.Yoyo);
+        sequence.Append(transform.DOScale(Vector3.one * 165f, 0.2f));
+        sequence.Play();
     }
 }

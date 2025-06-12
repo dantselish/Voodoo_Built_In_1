@@ -1,15 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
     [SerializeField] private Normie playerPrefab;
     [SerializeField] private Normie enemyPrefab;
+    [SerializeField] private ParticleSystem particle;
 
     public int multiplier;
 
     private List<Normie> _triggered = new List<Normie>();
+    private Sequence sequence;
+    private Vector3 startScale;
 
+
+    private void Awake()
+    {
+        startScale = transform.localScale;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,5 +61,21 @@ public class Gate : MonoBehaviour
         spawnPosition += originTransform.forward * 0.1f;
         Normie newNormie = Instantiate(type == NormieType.Player ? playerPrefab : enemyPrefab, spawnPosition, originTransform.rotation);
         _triggered.Add(newNormie);
+        HandleTween();
+        Instantiate(particle, spawnPosition + Vector3.up * 0.5f, Quaternion.identity);
+    }
+
+    private void HandleTween()
+    {
+        if (sequence.IsActive())
+        {
+            sequence.Kill();
+            transform.localScale = startScale;
+        }
+
+        sequence = DOTween.Sequence();
+        sequence.SetLoops(2, LoopType.Yoyo);
+        sequence.Append(transform.DOScale(Vector3.one * 3.1f, 0.2f));
+        sequence.Play();
     }
 }

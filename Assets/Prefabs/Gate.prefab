@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6166312666557032994, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
   enemyPrefab: {fileID: 2752924707770838011, guid: 36127d7be17bba442ad9411416447487, type: 3}
+  particle: {fileID: 7485653381558755144, guid: c56686d89f5a367489126776697fd7bb, type: 3}
   multiplier: 2
 --- !u!65 &7350493609808647486
 BoxCollider:

@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 5675918286720250084}
   - component: {fileID: 5395517037092227052}
   - component: {fileID: 6122822810926341213}
+  - component: {fileID: 1865216333256802198}
   m_Layer: 0
   m_Name: Normie
   m_TagString: Untagged
@@ -699,6 +700,7 @@ MonoBehaviour:
   startSpeedSeconds: 0.45
   startSpeedMultiplier: 2
   rb: {fileID: 5675918286720250084}
+  animator: {fileID: 6122822810926341213}
   NormieType: 0
 --- !u!54 &5675918286720250084
 Rigidbody:
@@ -772,6 +774,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!135 &1865216333256802198
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861653675956739534}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!1 &3307169853549349453
 GameObject:
   m_ObjectHideFlags: 0

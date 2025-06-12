@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
     [SerializeField] private Normie playerNormiePrefab;
     [SerializeField] private Animator animator;
+    [SerializeField] private ParticleSystem deathParticle;
 
     [Space]
     [SerializeField] private float speed;
@@ -13,6 +17,7 @@ public class Cannon : MonoBehaviour
     private float _horizontalInput;
 
     private float _shootCooldownTimer;
+    private bool _killed;
 
 
     private void Update()
@@ -20,6 +25,24 @@ public class Cannon : MonoBehaviour
         _shootCooldownTimer -= Time.deltaTime;
         ManageInput();
         Move();
+    }
+
+    public void Kill()
+    {
+        if (_killed)
+        {
+            return;
+        }
+
+        _killed = true;
+        StartCoroutine(KillRoutine());
+    }
+
+    private IEnumerator KillRoutine()
+    {
+        Instantiate(deathParticle, transform.position, quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
+        gameObject.SetActive(false);
     }
 
     private void Move()

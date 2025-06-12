@@ -440,7 +440,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc780447c7f999644940ffe629026b82, type: 2}
+  - {fileID: 2100000, guid: 6d960348a71d0ae4d8e5574f28e77fd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1048,6 +1048,7 @@ GameObject:
   - component: {fileID: 2850016915113431823}
   - component: {fileID: 4707122409963403590}
   - component: {fileID: 3836198276770037506}
+  - component: {fileID: 4558391457511367378}
   m_Layer: 0
   m_Name: NormieEnemy
   m_TagString: Untagged
@@ -1088,6 +1089,7 @@ MonoBehaviour:
   startSpeedSeconds: 0.45
   startSpeedMultiplier: 2
   rb: {fileID: 2850016915113431823}
+  animator: {fileID: 3836198276770037506}
   NormieType: 1
 --- !u!54 &2850016915113431823
 Rigidbody:
@@ -1161,6 +1163,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!135 &4558391457511367378
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954964051321765890}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!1 &7213058118461718750
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using Random=UnityEngine.Random;
 
@@ -9,6 +10,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private TMP_Text text;
     [SerializeField] private Normie enemyPrefab;
     [SerializeField] private Animator animator;
+    [SerializeField] private ParticleSystem particle;
+    [SerializeField] private ParticleSystem particleDeath;
 
     [Space]
     [SerializeField] private int maxHp;
@@ -71,6 +74,7 @@ public class EnemyBase : MonoBehaviour
 
         text.SetText(_remainingHp.ToString());
         animator.SetTrigger("Hit");
+        Instantiate(particle, transform.position + Vector3.up * 2 + Vector3.back * 1.5f, quaternion.identity);
     }
 
     private void Death()
@@ -78,6 +82,7 @@ public class EnemyBase : MonoBehaviour
         text.gameObject.SetActive(false);
         animator.SetTrigger("Death");
         _dead = true;
+        Instantiate(particleDeath, transform.position + Vector3.up * 2 + Vector3.back * 1.5f, quaternion.identity);
         StartCoroutine(DisableTower());
     }
 

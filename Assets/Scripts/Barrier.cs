@@ -5,6 +5,7 @@ using UnityEngine;
 public class Barrier : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
+    [SerializeField] private ParticleSystem particle;
 
     [Space]
     [SerializeField] private int maxHp;
@@ -32,6 +33,7 @@ public class Barrier : MonoBehaviour
             return;
         }
 
+        Instantiate(particle, normie.transform.position + Vector3.up * 0.5f, Quaternion.identity);
         normie.Kill();
         --_hp;
         text.SetText(_hp.ToString());

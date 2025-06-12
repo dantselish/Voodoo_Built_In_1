@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class Normie : MonoBehaviour
@@ -10,6 +10,7 @@ public class Normie : MonoBehaviour
 
     [Space]
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator animator;
 
     private float basicSpeed;
     private Vector3 translateVector = Vector3.zero;
@@ -36,7 +37,7 @@ public class Normie : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (NormieType == NormieType.Enemy)
         {
@@ -64,6 +65,16 @@ public class Normie : MonoBehaviour
 
     public void Kill()
     {
+        StartCoroutine(KillRoutine());
+    }
+
+    private IEnumerator KillRoutine()
+    {
+        animator.enabled = false;
+        GetComponentInChildren<SkinnedMeshRenderer>().material.DOColor(Color.gray, 0.1f);
+        yield return new WaitForSeconds(0.1f);
+        transform.DOScale(0.00001f, 0.1f);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
 

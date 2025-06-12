@@ -15,8 +15,10 @@ Material:
   - _CAST_SHADOWS_ON
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
+  - _HOLOGRAM_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
+  - _MATCAP_ON
   - _OUTLINETYPE_NONE
   - _RECEIVE_SHADOWS_ON
   - _REFLECTIONS_CLASSIC
@@ -246,7 +248,7 @@ Material:
     - _Hit: 0
     - _HitBlend: 1
     - _HitGlow: 5
-    - _Hologram: 0
+    - _Hologram: 1
     - _HologramAccentAlpha: 0.5
     - _HologramAccentFrequency: 2
     - _HologramAccentSpeed: 1
@@ -272,7 +274,7 @@ Material:
     - _LightModel: 1
     - _LightmapColorCorrection: 0
     - _LineSize: 0.298
-    - _Matcap: 0
+    - _Matcap: 1
     - _MatcapBlend: 1
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1
