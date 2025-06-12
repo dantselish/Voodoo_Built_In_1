@@ -8,12 +8,16 @@ public class Cannon : MonoBehaviour
     [Space]
     [SerializeField] private float speed;
     [SerializeField] private float coordinateBorder;
+    [SerializeField] private float shootInterval;
 
     private float _horizontalInput;
+
+    private float _shootCooldownTimer;
 
 
     private void Update()
     {
+        _shootCooldownTimer -= Time.deltaTime;
         ManageInput();
         Move();
     }
@@ -47,9 +51,19 @@ public class Cannon : MonoBehaviour
 
     private void ManageInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && _shootCooldownTimer <= 0)
         {
             ShootNormie();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("Shooting", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator.SetBool("Shooting", false);
         }
 
         _horizontalInput = Input.GetAxis("Horizontal");
@@ -61,5 +75,7 @@ public class Cannon : MonoBehaviour
         Normie normie = Instantiate(playerNormiePrefab, spawnPos, Quaternion.identity);
         normie.PushStart();
         animator.SetTrigger("Shoot");
+        animator.SetBool("Shooting", true);
+        _shootCooldownTimer = shootInterval;
     }
 }

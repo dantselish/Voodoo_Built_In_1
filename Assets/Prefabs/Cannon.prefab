@@ -1203,6 +1203,7 @@ MonoBehaviour:
   animator: {fileID: 1435933377184288075}
   speed: 7
   coordinateBorder: 3.75
+  shootInterval: 0.5
 --- !u!95 &1435933377184288075
 Animator:
   serializedVersion: 7
