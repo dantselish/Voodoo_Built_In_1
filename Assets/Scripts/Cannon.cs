@@ -104,4 +104,17 @@ public class Cannon : MonoBehaviour
         Instantiate(shootSound);
         _shootCooldownTimer = shootInterval;
     }
+
+    private void SpawnNormie(Transform originTransform, Vector3 positionModifier)
+    {
+        Debug.Log("Spawn Normie");
+        Vector3 spawnPosition = originTransform.position + positionModifier;
+        spawnPosition += originTransform.forward * 0.1f;
+        Normie normie = Instantiate(playerNormiePrefab, spawnPosition, originTransform.rotation);
+        normie.PushStart();
+        animator.SetTrigger("Shoot");
+        animator.SetBool("Shooting", true);
+        Instantiate(shootSound);
+        _shootCooldownTimer = shootInterval;
+    }
 }
