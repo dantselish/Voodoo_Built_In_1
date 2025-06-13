@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Barrier
-  m_Shader: {fileID: 4800000, guid: 0dde7f0097aeb2541aea684ca0ad0e3c, type: 3}
+  m_Name: Pipe
+  m_Shader: {fileID: 4800000, guid: 6034452bd7752ab41918b7826b5cfd4f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -16,14 +16,12 @@ Material:
   - _CAST_SHADOWS_ON
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
   - _GREYSCALESTAGE_BEFORELIGHTING
-  - _HIGHLIGHTS_ON
   - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
-  - _MATCAP_ON
-  - _OUTLINETYPE_NONE
+  - _OUTLINETYPE_SIMPLE
   - _RECEIVE_SHADOWS_ON
-  - _REFLECTIONS_NONE
+  - _REFLECTIONS_CLASSIC
   - _RIMLIGHTINGSTAGE_BEFORELIGHTING
   - _SHADINGMODEL_BASIC
   - _SPECULARMODEL_NONE
@@ -38,7 +36,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -251,7 +249,7 @@ Material:
     - _HeightGradientPositionSpace: 0
     - _HighlightCutoff: 0.5
     - _HighlightSmoothness: 0.5
-    - _Highlights: 1
+    - _Highlights: 0
     - _HighlightsStrength: 1
     - _Hit: 0
     - _HitBlend: 1
@@ -267,9 +265,9 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 2
+    - _HueBrightness: 1.735
     - _HueBrightnessLM: 1
-    - _HueSaturation: 0.79
+    - _HueSaturation: 4
     - _HueSaturationLM: 1
     - _HueShift: 0
     - _HueShiftEnabled: 1
@@ -280,11 +278,13 @@ Material:
     - _IntersectionGlowOn: 0
     - _LightModel: 1
     - _LightmapColorCorrection: 0
-    - _Matcap: 1
+    - _Matcap: 0
     - _MatcapBlend: 0.158
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1
+    - _MaxCameraDistance: 1000
     - _MaxDistanceToFade: 100
+    - _MaxFadeDistance: 250
     - _MaxGradientHeight: 0.75
     - _MaxInflate: 0.2
     - _MaxRim: 1
@@ -300,7 +300,9 @@ Material:
     - _NormalMapEnabled: 0
     - _NormalStrength: 1
     - _OcclusionStrength: 1
-    - _OutlineType: 0
+    - _OutlineMode: 8
+    - _OutlineThickness: 3.44
+    - _OutlineType: 1
     - _Parallax: 0.02
     - _Pixelate: 0
     - _PixelateSize: 32
@@ -309,8 +311,8 @@ Material:
     - _PosterizeNumColors: 8
     - _RecalculateNormals: 0
     - _ReceiveShadowsOn: 1
-    - _Reflections: 0
-    - _ReflectionsAtten: 0.5
+    - _Reflections: 1
+    - _ReflectionsAtten: 0.385
     - _RenderPreset: 1
     - _RimAttenuation: 1
     - _RimLighting: 0
@@ -337,6 +339,7 @@ Material:
     - _SpecularToonSmoothness: 0
     - _SpherizeNormals: 0
     - _SrcBlend: 1
+    - _StencilRef: 1
     - _StochasticSampling: 0
     - _StochasticScale: 3.464
     - _StochasticSkew: 0.57735026
@@ -392,6 +395,7 @@ Material:
     - _HitColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramColor: {r: 1.25, g: 2.8, b: 6.8, a: 1}
     - _HologramLineDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimOffset: {r: 0, g: 0, b: 0, a: 0}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
