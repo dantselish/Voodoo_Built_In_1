@@ -17,6 +17,7 @@ Material:
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HIGHLIGHTS_ON
+  - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_SIMPLE
@@ -279,12 +280,12 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 1
+    - _HueBrightness: 1.299
     - _HueBrightnessLM: 1
-    - _HueSaturation: 1
+    - _HueSaturation: 1.49
     - _HueSaturationLM: 1
     - _HueShift: 0
-    - _HueShiftEnabled: 0
+    - _HueShiftEnabled: 1
     - _HueShiftLM: 0
     - _InflateBlend: 1
     - _IntersectionFadeFactor: 1
@@ -315,7 +316,7 @@ Material:
     - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _OutlineMode: 8
-    - _OutlineThickness: 1
+    - _OutlineThickness: 1.53
     - _OutlineType: 1
     - _Parallax: 0.02
     - _Pixelate: 0
@@ -395,7 +396,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.11764703, g: 0.23921567, b: 0.60784316, a: 1}
+    - _Color: {r: 0.2921858, g: 0.44900653, b: 0.9245283, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

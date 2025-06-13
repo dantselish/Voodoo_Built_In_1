@@ -81,3 +81,9 @@ public class Gate : MonoBehaviour
         Instantiate(sound);
     }
 }
+
+[System.Serializable]
+public class Wave
+{
+    public int enemies;
+}

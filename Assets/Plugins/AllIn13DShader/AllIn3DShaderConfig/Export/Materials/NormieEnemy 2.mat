@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NormieEnemy
+  m_Name: NormieEnemy 2
   m_Shader: {fileID: 4800000, guid: 6034452bd7752ab41918b7826b5cfd4f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -23,7 +23,6 @@ Material:
   - _RECEIVE_SHADOWS_ON
   - _REFLECTIONS_CLASSIC
   - _RIMLIGHTINGSTAGE_BEFORELIGHTINGLAST
-  - _RIM_LIGHTING_ON
   - _SHADINGMODEL_PBR
   - _SPECULARMODEL_TOON
   - _TEXTUREBLENDINGMODE_RGB
@@ -330,7 +329,7 @@ Material:
     - _ReflectionsAtten: 0.5
     - _RenderPreset: 1
     - _RimAttenuation: 1
-    - _RimLighting: 1
+    - _RimLighting: 0
     - _RimLightingStage: 1
     - _SSSAtten: 1
     - _SSSFrontAtten: 0.3
@@ -396,7 +395,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    - _Color: {r: 0.8867924, g: 0.10457456, b: 0.10457456, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

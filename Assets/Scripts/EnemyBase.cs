@@ -16,8 +16,11 @@ public class EnemyBase : MonoBehaviour
 
     [Space]
     [SerializeField] private int maxHp;
-    [SerializeField] private int enemiesInWave;
     [SerializeField] private float waveInterval;
+    [SerializeField] private Wave[] waves;
+
+    private int currentWaveIndex;
+    private Wave currentWave => waves[currentWaveIndex];
 
     private int _remainingHp;
     private float _waveCooldown;
@@ -96,10 +99,11 @@ public class EnemyBase : MonoBehaviour
 
     private void SpawnWave()
     {
-        for (int i = 0; i < enemiesInWave; i++)
+        for (int i = 0; i < currentWave.enemies; i++)
         {
             SpawnNormie();
         }
+        ++currentWaveIndex;
     }
 
     private void SpawnNormie()

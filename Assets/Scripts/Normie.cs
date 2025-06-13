@@ -14,6 +14,7 @@ public class Normie : MonoBehaviour
 
     private float basicSpeed;
     private Vector3 translateVector = Vector3.zero;
+    private bool killed;
 
     public NormieType NormieType;
     public bool Launched { get; private set; }
@@ -50,7 +51,7 @@ public class Normie : MonoBehaviour
             return;
         }
 
-        if (otherNormie.NormieType == NormieType.Enemy)
+        if (otherNormie.NormieType == NormieType.Enemy && !killed)
         {
             Kill();
             otherNormie.Kill();
@@ -65,6 +66,7 @@ public class Normie : MonoBehaviour
 
     public void Kill()
     {
+        killed = true;
         StartCoroutine(KillRoutine());
     }
 

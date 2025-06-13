@@ -395,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3142880741907031515}
   - component: {fileID: 77542187864417345}
+  - component: {fileID: 5741748692341162519}
   m_Layer: 0
   m_Name: 3D_MobNormie
   m_TagString: Untagged
@@ -440,7 +441,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d960348a71d0ae4d8e5574f28e77fd7, type: 2}
+  - {fileID: 2100000, guid: 9287f9a862f69f44c9cc1ee3d87bb9c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -487,6 +488,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.61174864, y: -0.0032862276, z: -0.0114791095}
     m_Extent: {x: 0.57588214, y: 0.3481143, z: 0.3982449}
   m_DirtyAABB: 0
+--- !u!114 &5741748692341162519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082539839750349725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fb2c5f145047846ac8e94ce0994dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currRenderer: {fileID: 77542187864417345}
 --- !u!1 &3163865067269183874
 GameObject:
   m_ObjectHideFlags: 0
