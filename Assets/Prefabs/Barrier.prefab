@@ -300,4 +300,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 2125161513533672482}
   particle: {fileID: 1484968373715337884, guid: 6280e8f4a796a83438e50bf21981e66b, type: 3}
+  sound: {fileID: 3892523352313867060, guid: 7c5dcf4d5c0f0e74fb905dd40f6c0445, type: 3}
   maxHp: 999

@@ -6,6 +6,7 @@ public class Barrier : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
     [SerializeField] private ParticleSystem particle;
+    [SerializeField] private AudioSource sound;
 
     [Space]
     [SerializeField] private int maxHp;
@@ -37,5 +38,6 @@ public class Barrier : MonoBehaviour
         normie.Kill();
         --_hp;
         text.SetText(_hp.ToString());
+        Instantiate(sound);
     }
 }

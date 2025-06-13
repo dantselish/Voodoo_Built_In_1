@@ -8,6 +8,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private Normie playerPrefab;
     [SerializeField] private Normie enemyPrefab;
     [SerializeField] private ParticleSystem particle;
+    [SerializeField] private AudioSource sound;
 
     public int multiplier;
 
@@ -77,5 +78,6 @@ public class Gate : MonoBehaviour
         sequence.SetLoops(2, LoopType.Yoyo);
         sequence.Append(transform.DOScale(Vector3.one * 3.1f, 0.2f));
         sequence.Play();
+        Instantiate(sound);
     }
 }

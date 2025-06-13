@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -8,6 +7,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] private Normie playerNormiePrefab;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem deathParticle;
+    [SerializeField] private AudioSource shootSound;
+    [SerializeField] private AudioSource deathSound;
 
     [Space]
     [SerializeField] private float speed;
@@ -41,6 +42,7 @@ public class Cannon : MonoBehaviour
     private IEnumerator KillRoutine()
     {
         Instantiate(deathParticle, transform.position, quaternion.identity);
+        Instantiate(deathSound);
         yield return new WaitForSeconds(0.3f);
         gameObject.SetActive(false);
     }
@@ -99,6 +101,7 @@ public class Cannon : MonoBehaviour
         normie.PushStart();
         animator.SetTrigger("Shoot");
         animator.SetBool("Shooting", true);
+        Instantiate(shootSound);
         _shootCooldownTimer = shootInterval;
     }
 }

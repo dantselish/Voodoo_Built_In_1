@@ -12,6 +12,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem particle;
     [SerializeField] private ParticleSystem particleDeath;
+    [SerializeField] private AudioSource death;
 
     [Space]
     [SerializeField] private int maxHp;
@@ -83,6 +84,7 @@ public class EnemyBase : MonoBehaviour
         animator.SetTrigger("Death");
         _dead = true;
         Instantiate(particleDeath, transform.position + Vector3.up * 2 + Vector3.back * 1.5f, quaternion.identity);
+        Instantiate(death);
         StartCoroutine(DisableTower());
     }
 

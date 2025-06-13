@@ -105,6 +105,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 6166312666557032994, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
   enemyPrefab: {fileID: 2752924707770838011, guid: 36127d7be17bba442ad9411416447487, type: 3}
   particle: {fileID: 7485653381558755144, guid: c56686d89f5a367489126776697fd7bb, type: 3}
+  sound: {fileID: 9014492371310214350, guid: 0ad9194185d24bd4bbef203c32f3d2f7, type: 3}
   multiplier: 2
 --- !u!65 &7350493609808647486
 BoxCollider:
@@ -187,7 +188,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8771794807069781801, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,8 +232,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: x2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
+  m_sharedMaterial: {fileID: -8771794807069781801, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

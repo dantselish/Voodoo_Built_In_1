@@ -5,6 +5,7 @@ using UnityEngine;
 public class PipeStart : MonoBehaviour
 {
     [SerializeField] private PipeEnd pipeEnd;
+    [SerializeField] private AudioSource sound;
 
     private Sequence sequence;
     private Vector3 startScale;
@@ -31,6 +32,7 @@ public class PipeStart : MonoBehaviour
 
         normie.gameObject.SetActive(false);
         pipeEnd.AddToEnd(normie);
+        Instantiate(sound);
         HandleTween();
     }
 

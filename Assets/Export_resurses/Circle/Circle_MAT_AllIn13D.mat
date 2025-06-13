@@ -16,6 +16,7 @@ Material:
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HOLOGRAM_ON
+  - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _MATCAP_ON
@@ -260,12 +261,12 @@ Material:
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
     - _HologramSpeed: 81.1
-    - _HueBrightness: 1
+    - _HueBrightness: 1.556
     - _HueBrightnessLM: 1
-    - _HueSaturation: 1
+    - _HueSaturation: 2.06
     - _HueSaturationLM: 1
     - _HueShift: 0
-    - _HueShiftEnabled: 0
+    - _HueShiftEnabled: 1
     - _HueShiftLM: 0
     - _InflateBlend: 1
     - _IntersectionFadeFactor: 1
