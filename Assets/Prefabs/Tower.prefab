@@ -106,10 +106,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 8421201016345595026}
   enemyPrefab: {fileID: 2752924707770838011, guid: 36127d7be17bba442ad9411416447487, type: 3}
+  greatprefab: {fileID: 3743219878241440624, guid: b3535d136169a5c40b2690d33a673eae, type: 3}
   animator: {fileID: 3187718248176731605}
-  maxHp: 45
-  enemiesInWave: 13
+  particle: {fileID: 3213164014328556986, guid: 0b68e209461f0114eb14bfc2fa684439, type: 3}
+  particleDeath: {fileID: 2555728658033373695, guid: 15cf42d21cf18304285222888173f570, type: 3}
+  death: {fileID: 5190720438616554418, guid: 86bbcf405f814df4793a6ac1b80190fb, type: 3}
+  maxHp: 150
   waveInterval: 2
+  waves:
+  - enemies: 20
+  - enemies: 36
+  - enemies: 50
+  - enemies: 50
+  - enemies: 50
+  - enemies: 50
+  - enemies: 50
+  - enemies: 50
+  - enemies: 50
+  greatSpawn: 30000
+  WokeUp: 0
 --- !u!65 &5533665876052077529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -512,7 +527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: -8771794807069781801, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -556,8 +571,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 56
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
+  m_sharedMaterial: {fileID: -8771794807069781801, guid: 33b18bb398f53fc49874b9474b2e7214, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

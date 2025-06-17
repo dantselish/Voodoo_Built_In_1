@@ -57,7 +57,6 @@ public class Gate : MonoBehaviour
 
     private void SpawnNormie(NormieType type, Transform originTransform, Vector3 positionModifier)
     {
-        Debug.Log("Spawn Normie");
         Vector3 spawnPosition = originTransform.position + positionModifier;
         spawnPosition += originTransform.forward * 0.1f;
         Normie newNormie = Instantiate(type == NormieType.Player ? playerPrefab : enemyPrefab, spawnPosition, originTransform.rotation);

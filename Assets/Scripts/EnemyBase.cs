@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
     [SerializeField] private Normie enemyPrefab;
+    [SerializeField] private Normie greatprefab;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem particle;
     [SerializeField] private ParticleSystem particleDeath;
@@ -18,6 +20,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private int maxHp;
     [SerializeField] private float waveInterval;
     [SerializeField] private Wave[] waves;
+    [SerializeField] private float greatSpawn;
 
     private int currentWaveIndex;
     private Wave currentWave => waves[currentWaveIndex];
@@ -26,21 +29,40 @@ public class EnemyBase : MonoBehaviour
     private float _waveCooldown;
     private bool _dead;
 
+    public bool WokeUp;
+
 
     private void Awake()
     {
         _remainingHp = maxHp;
         text.SetText(maxHp.ToString());
-        _waveCooldown = waveInterval;
+        _waveCooldown = 1.5f;
     }
 
     private void Update()
     {
+        if (!WokeUp)
+        {
+            return;
+        }
+
         _waveCooldown -= Time.deltaTime;
         if (_waveCooldown <= 0)
         {
             SpawnWave();
             _waveCooldown = waveInterval;
+        }
+
+        greatSpawn -= Time.deltaTime;
+        if (greatSpawn <= 0)
+        {
+            Quaternion rotation = transform.rotation;
+            Vector3 eulerRotation = rotation.eulerAngles;
+            Vector3 basePosition = transform.position;
+            Vector3 spawnPosition = basePosition;
+            spawnPosition.z = Random.Range(basePosition.z - 3.5f, basePosition.z - 2);
+            Instantiate(greatprefab, spawnPosition, Quaternion.Euler(eulerRotation));
+            greatSpawn = 99999999;
         }
     }
 
@@ -88,6 +110,12 @@ public class EnemyBase : MonoBehaviour
         _dead = true;
         Instantiate(particleDeath, transform.position + Vector3.up * 2 + Vector3.back * 1.5f, quaternion.identity);
         Instantiate(death);
+
+        foreach (Normie normy in FindObjectsByType<Normie>(FindObjectsSortMode.None))
+        {
+            normy.Kill();
+        }
+
         StartCoroutine(DisableTower());
     }
 
@@ -99,6 +127,11 @@ public class EnemyBase : MonoBehaviour
 
     private void SpawnWave()
     {
+        if (currentWaveIndex >= waves.Length)
+        {
+            return;
+        }
+
         for (int i = 0; i < currentWave.enemies; i++)
         {
             SpawnNormie();
@@ -111,7 +144,7 @@ public class EnemyBase : MonoBehaviour
         Vector3 basePosition = transform.position;
         Vector3 spawnPosition = basePosition;
         spawnPosition.z = Random.Range(basePosition.z - 3.5f, basePosition.z - 2);
-        spawnPosition.x = Random.Range(basePosition.x - 1f, basePosition.x + 1f);
+        spawnPosition.x = Random.Range(basePosition.x - 1f, basePosition.x - 0.5f);
         Quaternion rotation = transform.rotation;
         var eulerRotation = rotation.eulerAngles;
         //eulerRotation.y += 180;

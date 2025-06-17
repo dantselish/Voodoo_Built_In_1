@@ -86,8 +86,8 @@ public class CirclePart : MonoBehaviour
     private void SpawnNormie(Transform originTransform, int index)
     {
         Vector3 modifier = Vector3.zero;
-        modifier.x = Random.Range(-0.5f * index, 0.5f * index);
-        modifier.z = Random.Range(0, index * 0.5f);
+        modifier.x = Random.Range(-0.05f * index, 0.05f * index);
+        modifier.z = Random.Range(0, index * 0.05f);
 
         // Vector3 spawnPosition = originTransform.position + positionModifier;
         // spawnPosition += originTransform.forward * 0.1f;

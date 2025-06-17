@@ -12,6 +12,7 @@ public class Cannon : MonoBehaviour
 
     [Space]
     [SerializeField] private float speed;
+    [SerializeField] private float travelSpeed;
     [SerializeField] private float coordinateBorder;
     [SerializeField] private float shootInterval;
 
@@ -19,6 +20,8 @@ public class Cannon : MonoBehaviour
 
     private float _shootCooldownTimer;
     private bool _killed;
+
+    private IEnumerator _travelRoutine;
 
 
     private void Update()
@@ -37,6 +40,28 @@ public class Cannon : MonoBehaviour
 
         _killed = true;
         StartCoroutine(KillRoutine());
+    }
+
+    public void TravelStart()
+    {
+        animator.SetTrigger("TravelBegin");
+        _travelRoutine = TravelRoutine();
+        StartCoroutine(_travelRoutine);
+    }
+
+    private IEnumerator TravelRoutine()
+    {
+        FindAnyObjectByType<CameraController>().Transition();
+        yield return new WaitForSeconds(0.733f);
+        while (transform.position.z < -10.65f)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * travelSpeed, Space.World);
+            yield return null;
+        }
+        animator.SetTrigger("TravelEnd");
+        FindAnyObjectByType<CameraController>().Finish();
+        FindAnyObjectByType<EnemyBase>().WokeUp = true;
+        _travelRoutine = null;
     }
 
     private IEnumerator KillRoutine()
@@ -76,6 +101,13 @@ public class Cannon : MonoBehaviour
 
     private void ManageInput()
     {
+        _horizontalInput = Input.GetAxis("Horizontal");
+
+        if (_travelRoutine != null)
+        {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.Space) && _shootCooldownTimer <= 0)
         {
             ShootNormie();
@@ -90,8 +122,6 @@ public class Cannon : MonoBehaviour
         {
             animator.SetBool("Shooting", false);
         }
-
-        _horizontalInput = Input.GetAxis("Horizontal");
     }
 
     private void ShootNormie()
