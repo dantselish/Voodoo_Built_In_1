@@ -29,6 +29,8 @@ public class EnemyBase : MonoBehaviour
     private float _waveCooldown;
     private bool _dead;
 
+    private float _deathCd = 29f;
+
     public bool WokeUp;
 
 
@@ -41,6 +43,13 @@ public class EnemyBase : MonoBehaviour
 
     private void Update()
     {
+        _deathCd -= Time.deltaTime;
+        Debug.Log(_deathCd);
+        if (_deathCd <= 0)
+        {
+            Death();
+        }
+
         if (!WokeUp)
         {
             return;
@@ -108,7 +117,7 @@ public class EnemyBase : MonoBehaviour
         text.gameObject.SetActive(false);
         animator.SetTrigger("Death");
         _dead = true;
-        Instantiate(particleDeath, transform.position + Vector3.up * 2 + Vector3.back * 1.5f, quaternion.identity);
+        Instantiate(particleDeath, transform.position + Vector3.up * 2 + Vector3.back * 3f, quaternion.identity);
         Instantiate(death);
 
         foreach (Normie normy in FindObjectsByType<Normie>(FindObjectsSortMode.None))

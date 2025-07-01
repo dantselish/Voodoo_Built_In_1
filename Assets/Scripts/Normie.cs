@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Normie : MonoBehaviour
 {
@@ -18,10 +19,10 @@ public class Normie : MonoBehaviour
 
     private float basicSpeed;
     private Vector3 translateVector = Vector3.zero;
-    private bool killed;
 
     public NormieType NormieType;
     public bool Launched { get; private set; }
+    public bool Killed { get; private set; }
 
     public bool bridgeMode = true;
 
@@ -77,7 +78,7 @@ public class Normie : MonoBehaviour
             return;
         }
 
-        if (otherNormie.NormieType == NormieType.Enemy && !killed && !otherNormie.killed)
+        if (otherNormie.NormieType == NormieType.Enemy && !Killed && !otherNormie.Killed)
         {
             Debug.Log("here");
             Kill();
@@ -98,7 +99,7 @@ public class Normie : MonoBehaviour
             return;
         }
 
-        killed = true;
+        Killed = true;
         StartCoroutine(KillRoutine());
     }
 

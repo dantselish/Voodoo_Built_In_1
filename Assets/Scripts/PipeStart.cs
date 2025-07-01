@@ -46,7 +46,7 @@ public class PipeStart : MonoBehaviour
 
         sequence = DOTween.Sequence();
         sequence.SetLoops(2, LoopType.Yoyo);
-        sequence.Append(transform.DOScale(Vector3.one * 165f, 0.2f));
+        sequence.Append(transform.DOScale(Vector3.one * 189f, 0.2f));
         sequence.Play();
     }
 }

@@ -1100,13 +1100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b558405521f2f934389c5d4013630990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.8
+  speed: 4
   startSpeedSeconds: 0.45
   startSpeedMultiplier: 2
   canDie: 1
   rb: {fileID: 2850016915113431823}
   animator: {fileID: 3836198276770037506}
   NormieType: 1
+  bridgeMode: 1
 --- !u!54 &2850016915113431823
 Rigidbody:
   m_ObjectHideFlags: 0

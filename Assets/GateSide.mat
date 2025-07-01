@@ -15,6 +15,7 @@ Material:
   - _CAST_SHADOWS_ON
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
   - _GREYSCALESTAGE_BEFORELIGHTING
+  - _HEIGHT_GRADIENT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_NONE
@@ -214,7 +215,7 @@ Material:
     - _DitherScale: 10
     - _DstBlend: 0
     - _EmissionEnabled: 0
-    - _EmissionSelfGlow: 15.13
+    - _EmissionSelfGlow: 20
     - _FaceDownCutoff: 0.25
     - _FadeAmount: 0
     - _FadeBurnOn: 0
@@ -224,7 +225,7 @@ Material:
     - _FadePower: 1
     - _FadeTransition: 0.2
     - _FogOn: 0
-    - _GeneralAlpha: 0.982
+    - _GeneralAlpha: 1
     - _Glitch: 0
     - _GlitchAmount: 0.5
     - _GlitchSpeed: 2.5
@@ -243,7 +244,7 @@ Material:
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
     - _HardnessFakeGI: 0.75
-    - _HeightGradientOn: 0
+    - _HeightGradientOn: 1
     - _HeightGradientPositionSpace: 0
     - _HighlightCutoff: 0.5
     - _HighlightSmoothness: 0.5
@@ -281,7 +282,7 @@ Material:
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1
     - _MaxDistanceToFade: 100
-    - _MaxGradientHeight: 0.75
+    - _MaxGradientHeight: 0.63
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
@@ -374,13 +375,13 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.46274513, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.78039217, b: 0.9254902, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
-    - _EmissionColor: {r: 0.78353804, g: 0.87136734, b: 0.17788847, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlitchOffset: {r: -0.5, g: 0, b: 0, a: 0}
-    - _GradientHeightColor01: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _GradientHeightColor01: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
     - _GradientHeightColor02: {r: 1, g: 1, b: 1, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightOffset: {r: 0, g: 0, b: 0, a: 0}

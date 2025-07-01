@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class BridgeBarrier : MonoBehaviour
@@ -13,17 +14,29 @@ public class BridgeBarrier : MonoBehaviour
     [SerializeField] private ParticleSystem particle3;
 
     [Space]
+    [SerializeField] private Vector3 newScale;
+    [SerializeField] private Color color;
+    [SerializeField] private MeshRenderer meshRenderer;
+
+    [Space]
     [SerializeField] private int maxHp;
 
     private int _hp;
 
     private bool _built;
 
+    private Sequence sequence;
+    private Color startColor;
+    private Vector3 startScale;
+
 
     private void Awake()
     {
         _hp = maxHp;
         text.SetText(maxHp.ToString());
+
+        startColor = meshRenderer.material.color;
+        startScale = transform.localScale;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -35,7 +48,7 @@ public class BridgeBarrier : MonoBehaviour
             return;
         }
 
-        if (normie.NormieType == NormieType.Enemy)
+        if (normie.NormieType == NormieType.Enemy || normie.Killed)
         {
             return;
         }
@@ -51,6 +64,22 @@ public class BridgeBarrier : MonoBehaviour
 
         text.SetText(_hp.ToString());
         Instantiate(sound);
+        HandleSequence();
+    }
+
+    private void HandleSequence()
+    {
+        if (sequence.IsActive())
+        {
+            transform.localScale = startScale;
+            meshRenderer.material.color = startColor;
+            sequence.Kill();
+        }
+
+        sequence = DOTween.Sequence();
+        sequence.Append(meshRenderer.material.DOColor(color, 0.2f));
+        sequence.Join(transform.DOScale(newScale, 0.2f));
+        sequence.SetLoops(2, LoopType.Yoyo);
     }
 
     private void BuildBridge()
