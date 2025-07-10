@@ -12,11 +12,13 @@ public class BridgeBarrier : MonoBehaviour
     [SerializeField] private ParticleSystem particle1;
     [SerializeField] private ParticleSystem particle2;
     [SerializeField] private ParticleSystem particle3;
+    [SerializeField] private ParticleSystem particle4;
 
     [Space]
     [SerializeField] private Vector3 newScale;
     [SerializeField] private Color color;
     [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Animator bridgeAnimator;
 
     [Space]
     [SerializeField] private int maxHp;
@@ -77,8 +79,8 @@ public class BridgeBarrier : MonoBehaviour
         }
 
         sequence = DOTween.Sequence();
-        sequence.Append(meshRenderer.material.DOColor(color, 0.2f));
-        sequence.Join(transform.DOScale(newScale, 0.2f));
+        sequence.Append(meshRenderer.material.DOColor(color, 0.1f));
+        sequence.Join(transform.DOScale(newScale, 0.1f));
         sequence.SetLoops(2, LoopType.Yoyo);
     }
 
@@ -90,6 +92,8 @@ public class BridgeBarrier : MonoBehaviour
         particle1.Play();
         particle2.Play();
         particle3.Play();
+        particle4.Play();
+        bridgeAnimator.SetTrigger("glow");
         gameObject.SetActive(false);
         text.gameObject.SetActive(false);
     }

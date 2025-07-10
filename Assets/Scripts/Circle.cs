@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Circle : MonoBehaviour
@@ -13,7 +14,7 @@ public class Circle : MonoBehaviour
     {
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 
-        CirclePart currentCirclePart = circleParts[0];
+        CirclePart currentCirclePart = circleParts.FirstOrDefault();
 
         for (int i = 1; i < circleParts.Count; i++)
         {

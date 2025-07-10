@@ -7,15 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GateSide
+  m_Name: pngwing.com
   m_Shader: {fileID: 4800000, guid: 0dde7f0097aeb2541aea684ca0ad0e3c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
+  - _COLOR_RAMP_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
-  - _HEIGHT_GRADIENT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_NONE
@@ -35,7 +36,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -70,24 +71,8 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2af6ba1567607124eb61349fa044375b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _ColorRampTex:
-        m_Texture: {fileID: 2800000, guid: 99b6592afee2790429156fef1dc9ba44, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 61607161eb9e281438630d3968f8f69c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortTex:
@@ -107,15 +92,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f9aeb193aac0dcb4c933e09be22f7402, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatcapTex:
         m_Texture: {fileID: 2800000, guid: cf3a2315564d4de4eb8601b697dea358, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
@@ -124,14 +105,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 120df76dc2d17ed4cb2d4b8b08292ed9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSMap:
@@ -171,13 +144,13 @@ Material:
     - _AffectedByLightmaps: 0
     - _AlbedoVertexColorMode: 1
     - _AlbedoVertexColorOn: 0
-    - _AlphaCutoffOn: 0
+    - _AlphaCutoffOn: 1
     - _AlphaCutoffValue: 0.25
     - _AlphaRoundOn: 0
     - _AnisoShininess: 0.85
     - _Anisotropy: 0.45
-    - _BlendDst: 10
-    - _BlendSrc: 5
+    - _BlendDst: 0
+    - _BlendSrc: 1
     - _BlendingMaskCutoffB: 0.1
     - _BlendingMaskCutoffG: 0.1
     - _BlendingMaskCutoffWhite: 0.15
@@ -186,13 +159,12 @@ Material:
     - _BlendingMaskSmoothnessWhite: 0.4
     - _Brightness: 0
     - _BrightnessLM: 0
-    - _BumpScale: 1
     - _CastShadowsOn: 1
     - _ColorMask: 15
     - _ColorRampBlend: 1
     - _ColorRampLightingStage: 0
     - _ColorRampLuminosity: 0
-    - _ColorRampOn: 0
+    - _ColorRampOn: 1
     - _ColorRampScrollSpeed: 0
     - _ColorRampTiling: 1
     - _Contrast: 1
@@ -201,21 +173,18 @@ Material:
     - _CullingMode: 2
     - _CustomAmbientLightOn: 0
     - _CustomShadowColorOn: 0
-    - _Cutoff: 0.5
     - _DepthColoringOn: 0
     - _DepthGlowColorIntensity: 25
     - _DepthGlowDist: 0.2
     - _DepthGlowGlobalIntensity: 2
     - _DepthGlowPower: 25
-    - _DetailNormalMapScale: 1
     - _DistortAmount: 0.3
     - _DistortTexXSpeed: 2
     - _DistortTexYSpeed: 2
     - _DitherOn: 0
     - _DitherScale: 10
-    - _DstBlend: 0
     - _EmissionEnabled: 0
-    - _EmissionSelfGlow: 20
+    - _EmissionSelfGlow: 1
     - _FaceDownCutoff: 0.25
     - _FadeAmount: 0
     - _FadeBurnOn: 0
@@ -232,9 +201,6 @@ Material:
     - _GlitchTiling: 5
     - _GlitchWorldSpace: 1
     - _GlossMapOn: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
     - _GreyScaleStage: 0
     - _Greyscale: 0
     - _GreyscaleBlend: 1
@@ -244,7 +210,7 @@ Material:
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
     - _HardnessFakeGI: 0.75
-    - _HeightGradientOn: 1
+    - _HeightGradientOn: 0
     - _HeightGradientPositionSpace: 0
     - _HighlightCutoff: 0.5
     - _HighlightSmoothness: 0.5
@@ -282,7 +248,7 @@ Material:
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1
     - _MaxDistanceToFade: 100
-    - _MaxGradientHeight: 0.63
+    - _MaxGradientHeight: 0.75
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
@@ -291,14 +257,11 @@ Material:
     - _MinGradientHeight: 0
     - _MinInflate: 0
     - _MinRim: 0
-    - _Mode: 0
     - _NearFade: 0
     - _NormalInfluence: 0.5
     - _NormalMapEnabled: 0
     - _NormalStrength: 1
-    - _OcclusionStrength: 1
     - _OutlineType: 0
-    - _Parallax: 0.02
     - _Pixelate: 0
     - _PixelateSize: 32
     - _Posterize: 0
@@ -308,7 +271,7 @@ Material:
     - _ReceiveShadowsOn: 1
     - _Reflections: 0
     - _ReflectionsAtten: 0.5
-    - _RenderPreset: 2
+    - _RenderPreset: 1
     - _RimAttenuation: 1
     - _RimLighting: 0
     - _RimLightingStage: 0
@@ -326,14 +289,11 @@ Material:
     - _ShakeSpeedMult: 1
     - _Shininess: 16
     - _Smoothness: 0.5
-    - _SmoothnessTextureChannel: 0
     - _SpecularAtten: 0.5
-    - _SpecularHighlights: 1
     - _SpecularModel: 0
     - _SpecularToonCutoff: 0.35
     - _SpecularToonSmoothness: 0
     - _SpherizeNormals: 0
-    - _SrcBlend: 1
     - _StochasticSampling: 0
     - _StochasticScale: 3.464
     - _StochasticSkew: 0.57735026
@@ -350,7 +310,6 @@ Material:
     - _TriplanarNormalSpace: 1
     - _TriplanarSharpness: 15
     - _UVDistortion: 0
-    - _UVSec: 0
     - _UseCustomTime: 0
     - _UseVerticalMask: 1
     - _VertexColorBlending: 1
@@ -372,16 +331,16 @@ Material:
     - _WindVerticalMaskMaxY: 1
     - _WindVerticalMaskMinY: -1
     - _ZTestMode: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.9568628, g: 0.9215687, b: 0.91372555, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlitchOffset: {r: -0.5, g: 0, b: 0, a: 0}
-    - _GradientHeightColor01: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    - _GradientHeightColor01: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _GradientHeightColor02: {r: 1, g: 1, b: 1, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightOffset: {r: 0, g: 0, b: 0, a: 0}

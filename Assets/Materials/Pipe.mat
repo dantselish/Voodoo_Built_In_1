@@ -12,19 +12,17 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
   - _GREYSCALESTAGE_BEFORELIGHTING
-  - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_NONE
   - _RECEIVE_SHADOWS_ON
-  - _REFLECTIONS_CLASSIC
+  - _REFLECTIONS_NONE
   - _RIMLIGHTINGSTAGE_BEFORELIGHTING
   - _SHADINGMODEL_BASIC
-  - _SPECULARMODEL_CLASSIC
+  - _SPECULARMODEL_NONE
   - _TEXTUREBLENDINGMODE_RGB
   - _USE_WIND_VERTICAL_MASK
   m_InvalidKeywords:
@@ -172,7 +170,7 @@ Material:
     - _AffectedByLightmaps: 0
     - _AlbedoVertexColorMode: 1
     - _AlbedoVertexColorOn: 0
-    - _AlphaCutoffOn: 1
+    - _AlphaCutoffOn: 0
     - _AlphaCutoffValue: 0.25
     - _AlphaRoundOn: 0
     - _AnisoShininess: 0.85
@@ -265,12 +263,12 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 1.735
+    - _HueBrightness: 0.521
     - _HueBrightnessLM: 1
-    - _HueSaturation: 4
+    - _HueSaturation: 2.68
     - _HueSaturationLM: 1
     - _HueShift: 0
-    - _HueShiftEnabled: 1
+    - _HueShiftEnabled: 0
     - _HueShiftLM: 0
     - _InflateBlend: 1
     - _IntersectionFadeFactor: 1
@@ -311,8 +309,8 @@ Material:
     - _PosterizeNumColors: 8
     - _RecalculateNormals: 0
     - _ReceiveShadowsOn: 1
-    - _Reflections: 1
-    - _ReflectionsAtten: 0.385
+    - _Reflections: 0
+    - _ReflectionsAtten: 0.265
     - _RenderPreset: 1
     - _RimAttenuation: 1
     - _RimLighting: 0
@@ -329,12 +327,12 @@ Material:
     - _ShadingModel: 0
     - _ShakeBlend: 1
     - _ShakeSpeedMult: 1
-    - _Shininess: 22.8
+    - _Shininess: 0.01
     - _Smoothness: 0.59
     - _SmoothnessTextureChannel: 0
-    - _SpecularAtten: 0.624
+    - _SpecularAtten: 0.137
     - _SpecularHighlights: 1
-    - _SpecularModel: 1
+    - _SpecularModel: 0
     - _SpecularToonCutoff: 0.35
     - _SpecularToonSmoothness: 0
     - _SpherizeNormals: 0
@@ -381,7 +379,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.1254902, g: 0.6117647, b: 1, a: 1}
+    - _Color: {r: 0.70980394, g: 0.49803925, b: 0.89019614, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -9,6 +11,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] private ParticleSystem deathParticle;
     [SerializeField] private AudioSource shootSound;
     [SerializeField] private AudioSource deathSound;
+    [SerializeField] private Circle circle;
 
     [Space]
     [SerializeField] private float speed;
@@ -23,6 +26,12 @@ public class Cannon : MonoBehaviour
 
     private IEnumerator _travelRoutine;
 
+
+    private void Start()
+    {
+        animator.Play("Start");
+        Invoke(nameof(EnableCircle), 1.267f);
+    }
 
     private void Update()
     {
@@ -47,6 +56,13 @@ public class Cannon : MonoBehaviour
         animator.SetTrigger("TravelBegin");
         _travelRoutine = TravelRoutine();
         StartCoroutine(_travelRoutine);
+    }
+
+    public void EnableCircle()
+    {
+        circle.gameObject.SetActive(true);
+        circle.transform.localScale = Vector3.zero;
+        circle.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
     }
 
     private IEnumerator TravelRoutine()
@@ -127,7 +143,9 @@ public class Cannon : MonoBehaviour
     private void ShootNormie()
     {
         Vector3 spawnPos = transform.position + transform.forward.normalized;
-        Normie normie = Instantiate(playerNormiePrefab, spawnPos, Quaternion.identity);
+        Normie normie = Instantiate(playerNormiePrefab, spawnPos + Vector3.left * 0.3f, Quaternion.identity);
+        normie.PushStart();
+        normie =Instantiate(playerNormiePrefab, spawnPos + Vector3.right * 0.3f, Quaternion.identity);
         normie.PushStart();
         animator.SetTrigger("Shoot");
         animator.SetBool("Shooting", true);

@@ -21,6 +21,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private float waveInterval;
     [SerializeField] private Wave[] waves;
     [SerializeField] private float greatSpawn;
+    [SerializeField] private float deathCd = 29f;
 
     private int currentWaveIndex;
     private Wave currentWave => waves[currentWaveIndex];
@@ -29,7 +30,6 @@ public class EnemyBase : MonoBehaviour
     private float _waveCooldown;
     private bool _dead;
 
-    private float _deathCd = 29f;
 
     public bool WokeUp;
 
@@ -43,9 +43,8 @@ public class EnemyBase : MonoBehaviour
 
     private void Update()
     {
-        _deathCd -= Time.deltaTime;
-        Debug.Log(_deathCd);
-        if (_deathCd <= 0)
+        deathCd -= Time.deltaTime;
+        if (deathCd <= 0)
         {
             Death();
         }

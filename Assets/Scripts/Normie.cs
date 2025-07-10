@@ -100,7 +100,10 @@ public class Normie : MonoBehaviour
         }
 
         Killed = true;
-        StartCoroutine(KillRoutine());
+        if (gameObject)
+        {
+            StartCoroutine(KillRoutine());
+        }
     }
 
     private IEnumerator KillRoutine()

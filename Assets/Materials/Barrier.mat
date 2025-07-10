@@ -18,7 +18,6 @@ Material:
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
   - _HEIGHT_GRADIENT_ON
-  - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_NONE
@@ -266,12 +265,12 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 1.282
+    - _HueBrightness: 0.624
     - _HueBrightnessLM: 1
-    - _HueSaturation: 1
+    - _HueSaturation: 3.94
     - _HueSaturationLM: 1
     - _HueShift: 0
-    - _HueShiftEnabled: 1
+    - _HueShiftEnabled: 0
     - _HueShiftLM: 0
     - _InflateBlend: 1
     - _IntersectionFadeFactor: 1
@@ -286,7 +285,7 @@ Material:
     - _MaxCameraDistance: 1000
     - _MaxDistanceToFade: 100
     - _MaxFadeDistance: 250
-    - _MaxGradientHeight: 0.75
+    - _MaxGradientHeight: 0.98
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
@@ -382,14 +381,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.7960785, b: 1, a: 1}
+    - _Color: {r: 0.9490197, g: 0.8588236, b: 0.97647065, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlitchOffset: {r: -0.5, g: 0, b: 0, a: 0}
-    - _GradientHeightColor01: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
-    - _GradientHeightColor02: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientHeightColor01: {r: 0.25415218, g: 0.086500466, b: 0.5028866, a: 1}
+    - _GradientHeightColor02: {r: 0.8796226, g: 0.66538745, b: 0.89626956, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightOffset: {r: 0, g: 0, b: 0, a: 0}
     - _HighlightsColor: {r: 2, g: 2, b: 2, a: 1}

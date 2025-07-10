@@ -47,7 +47,7 @@ public class Barrier : MonoBehaviour
             return;
         }
 
-        Instantiate(particle, normie.transform.position + Vector3.up * 0.5f, Quaternion.identity);
+        Instantiate(particle, normie.transform.position + Vector3.forward * 1 + Vector3.up * 0.5f, Quaternion.identity);
         normie.Kill();
         --_hp;
         text.SetText(_hp.ToString());
@@ -65,8 +65,8 @@ public class Barrier : MonoBehaviour
         }
 
         sequence = DOTween.Sequence();
-        sequence.Append(meshRenderer.material.DOColor(color, 0.2f));
-        sequence.Join(transform.DOScale(newScale, 0.2f));
+        sequence.Append(meshRenderer.material.DOColor(color, 0.1f));
+        sequence.Join(transform.DOScale(newScale, 0.1f));
         sequence.SetLoops(2, LoopType.Yoyo);
     }
 }
