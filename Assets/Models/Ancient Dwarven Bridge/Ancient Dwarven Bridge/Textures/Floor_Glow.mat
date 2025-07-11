@@ -193,7 +193,7 @@ Material:
     - _BumpScale: 1
     - _CastShadowsOn: 1
     - _ColorMask: 15
-    - _ColorRampBlend: 0.051
+    - _ColorRampBlend: 0.33
     - _ColorRampLightingStage: 0
     - _ColorRampLuminosity: 0
     - _ColorRampOn: 1

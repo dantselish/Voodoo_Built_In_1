@@ -285,13 +285,13 @@ Material:
     - _MaxCameraDistance: 1000
     - _MaxDistanceToFade: 100
     - _MaxFadeDistance: 250
-    - _MaxGradientHeight: 0.58
+    - _MaxGradientHeight: 1
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
     - _MetallicMapOn: 0
     - _MinDistanceToFade: 0
-    - _MinGradientHeight: 0
+    - _MinGradientHeight: 0.34
     - _MinInflate: 0
     - _MinRim: 0
     - _Mode: 0
@@ -388,7 +388,7 @@ Material:
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlitchOffset: {r: -0.5, g: 0, b: 0, a: 0}
     - _GradientHeightColor01: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
-    - _GradientHeightColor02: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientHeightColor02: {r: 1.0717734, g: 1.0717734, b: 1.0717734, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightOffset: {r: 0, g: 0, b: 0, a: 0}
     - _HighlightsColor: {r: 2, g: 2, b: 2, a: 1}

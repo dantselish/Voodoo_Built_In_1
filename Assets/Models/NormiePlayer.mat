@@ -22,7 +22,6 @@ Material:
   - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
-  - _MATCAP_ON
   - _OUTLINETYPE_SIMPLE
   - _RECEIVE_SHADOWS_ON
   - _REFLECTIONS_CLASSIC
@@ -283,7 +282,7 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 0.701
+    - _HueBrightness: 1.003
     - _HueBrightnessLM: 1
     - _HueSaturation: 2.02
     - _HueSaturationLM: 1
@@ -296,7 +295,7 @@ Material:
     - _IntersectionGlowOn: 0
     - _LightModel: 1
     - _LightmapColorCorrection: 0
-    - _Matcap: 1
+    - _Matcap: 0
     - _MatcapBlend: 1
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1

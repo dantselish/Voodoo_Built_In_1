@@ -22,7 +22,7 @@ Material:
   - _REFLECTIONS_NONE
   - _RIMLIGHTINGSTAGE_BEFORELIGHTING
   - _SHADINGMODEL_BASIC
-  - _SPECULARMODEL_NONE
+  - _SPECULARMODEL_CLASSIC
   - _TEXTUREBLENDINGMODE_RGB
   - _USE_WIND_VERTICAL_MASK
   m_InvalidKeywords:
@@ -310,7 +310,7 @@ Material:
     - _RecalculateNormals: 0
     - _ReceiveShadowsOn: 1
     - _Reflections: 0
-    - _ReflectionsAtten: 0.265
+    - _ReflectionsAtten: 0.05
     - _RenderPreset: 1
     - _RimAttenuation: 1
     - _RimLighting: 0
@@ -327,12 +327,12 @@ Material:
     - _ShadingModel: 0
     - _ShakeBlend: 1
     - _ShakeSpeedMult: 1
-    - _Shininess: 0.01
+    - _Shininess: 6.61
     - _Smoothness: 0.59
     - _SmoothnessTextureChannel: 0
-    - _SpecularAtten: 0.137
+    - _SpecularAtten: 0.25
     - _SpecularHighlights: 1
-    - _SpecularModel: 0
+    - _SpecularModel: 1
     - _SpecularToonCutoff: 0.35
     - _SpecularToonSmoothness: 0
     - _SpherizeNormals: 0

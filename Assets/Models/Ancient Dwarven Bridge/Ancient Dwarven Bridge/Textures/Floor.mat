@@ -15,6 +15,7 @@ Material:
   - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
+  - _COLOR_RAMP_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HUE_SHIFT_ON
   - _LIGHTMODEL_TOON
@@ -191,10 +192,10 @@ Material:
     - _BumpScale: 1
     - _CastShadowsOn: 1
     - _ColorMask: 15
-    - _ColorRampBlend: 0.4
+    - _ColorRampBlend: 0.181
     - _ColorRampLightingStage: 0
     - _ColorRampLuminosity: 0
-    - _ColorRampOn: 0
+    - _ColorRampOn: 1
     - _ColorRampScrollSpeed: 0
     - _ColorRampTiling: 1
     - _Contrast: 1

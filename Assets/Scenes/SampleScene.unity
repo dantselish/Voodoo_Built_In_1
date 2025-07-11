@@ -2961,10 +2961,10 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _CAST_SHADOWS_ON
-  - _CONTRAST_BRIGHTNESS_ON
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
+  - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _NORMAL_MAP_ON
@@ -3126,7 +3126,7 @@ Material:
     - _ColorRampScrollSpeed: 0
     - _ColorRampTiling: 1
     - _Contrast: 6.72
-    - _ContrastBrightnessOn: 1
+    - _ContrastBrightnessOn: 0
     - _ContrastLM: 1
     - _CullingMode: 2
     - _CustomAmbientLightOn: 0
@@ -3190,10 +3190,10 @@ Material:
     - _HologramScrollSpeed: 2
     - _HueBrightness: 2
     - _HueBrightnessLM: 1
-    - _HueSaturation: 0.65
+    - _HueSaturation: 0.56
     - _HueSaturationLM: 1
-    - _HueShift: 305
-    - _HueShiftEnabled: 0
+    - _HueShift: 298
+    - _HueShiftEnabled: 1
     - _HueShiftLM: 0
     - _InflateBlend: 1
     - _IntersectionFadeFactor: 1
@@ -3211,7 +3211,7 @@ Material:
     - _MaxGradientHeight: 0.75
     - _MaxInflate: 0.2
     - _MaxRim: 1
-    - _Metallic: 0.16799995
+    - _Metallic: 0.2
     - _MetallicMapOn: 0
     - _MinDistanceToFade: 0
     - _MinGradientHeight: 0
@@ -3250,7 +3250,7 @@ Material:
     - _ShakeBlend: 1
     - _ShakeSpeedMult: 1
     - _Shininess: 6.94
-    - _Smoothness: 0.457
+    - _Smoothness: 0.752
     - _SpecularAtten: 1
     - _SpecularModel: 1
     - _SpecularToonCutoff: 0.836
@@ -4664,6 +4664,67 @@ Material:
     - _VertexDistortionNoiseSpeed: {r: 4, g: 4, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!1001 &700169966
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2861653675956739534, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_Name
+      value: Normie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861653675956739534, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6639943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06925988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.037342
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530674006685247222, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,7 +4753,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8345,11 +8406,11 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 1.551
+    - _HueBrightness: 2
     - _HueBrightnessLM: 1
-    - _HueSaturation: 0.61
+    - _HueSaturation: 0.56
     - _HueSaturationLM: 1
-    - _HueShift: 305
+    - _HueShift: 298
     - _HueShiftEnabled: 1
     - _HueShiftLM: 0
     - _InflateBlend: 1
@@ -8368,7 +8429,7 @@ Material:
     - _MaxGradientHeight: 0.75
     - _MaxInflate: 0.2
     - _MaxRim: 1
-    - _Metallic: 0.594
+    - _Metallic: 0.2
     - _MetallicMapOn: 0
     - _MinDistanceToFade: 0
     - _MinGradientHeight: 0
@@ -8379,7 +8440,7 @@ Material:
     - _NormalMapEnabled: 1
     - _NormalStrength: 0.66
     - _OutlineMode: 6
-    - _OutlineThickness: 0.015
+    - _OutlineThickness: 0.02
     - _OutlineType: 1
     - _Pixelate: 0
     - _PixelateSize: 32
@@ -9053,7 +9114,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorRampTex:
-        m_Texture: {fileID: 2800000, guid: 99b6592afee2790429156fef1dc9ba44, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61607161eb9e281438630d3968f8f69c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortTex:
@@ -9142,7 +9203,7 @@ Material:
     - _BrightnessLM: 0
     - _CastShadowsOn: 1
     - _ColorMask: 15
-    - _ColorRampBlend: 1
+    - _ColorRampBlend: 0.049
     - _ColorRampLightingStage: 1
     - _ColorRampLuminosity: 0
     - _ColorRampOn: 0
@@ -9211,7 +9272,7 @@ Material:
     - _HologramLineSmoothness: 2
     - _HologramLineSpacing: 2
     - _HologramScrollSpeed: 2
-    - _HueBrightness: 1.521
+    - _HueBrightness: 2
     - _HueBrightnessLM: 1
     - _HueSaturation: 0.61
     - _HueSaturationLM: 1
@@ -9255,7 +9316,7 @@ Material:
     - _RecalculateNormals: 0
     - _ReceiveShadowsOn: 1
     - _Reflections: 0
-    - _ReflectionsAtten: 1
+    - _ReflectionsAtten: 0.038
     - _RenderPreset: 1
     - _RimAttenuation: 1
     - _RimLighting: 0
@@ -9272,7 +9333,7 @@ Material:
     - _ShadingModel: 0
     - _ShakeBlend: 1
     - _ShakeSpeedMult: 1
-    - _Shininess: 6.94
+    - _Shininess: 7.88
     - _Smoothness: 0
     - _SpecularAtten: 1
     - _SpecularModel: 0
@@ -13816,3 +13877,4 @@ SceneRoots:
   - {fileID: 2907095}
   - {fileID: 1465854690}
   - {fileID: 1084012667667877570}
+  - {fileID: 700169966}
