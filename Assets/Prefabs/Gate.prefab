@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1235815691191186347}
   - component: {fileID: 6205589829556112716}
   - component: {fileID: 7350493609808647486}
+  - component: {fileID: 6809721342311414764}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c352cadf13819c4ba65b9b1aaf79ec1, type: 2}
+  - {fileID: 2100000, guid: bdea6cb40d79a4541a384a13d6d325ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,6 +129,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2797861, y: 0.61498916, z: 0.01}
   m_Center: {x: 0.0024228096, y: 0.2751547, z: -0.03}
+--- !u!114 &6809721342311414764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3682387335236696044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fb2c5f145047846ac8e94ce0994dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currRenderer: {fileID: 1235815691191186347}
 --- !u!1 &4666329396128108465
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +168,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4666329396128108465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

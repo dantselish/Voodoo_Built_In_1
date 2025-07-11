@@ -12,20 +12,20 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
+  - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
+  - _HEIGHT_GRADIENT_ON
   - _HIGHLIGHTS_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_SIMPLE
   - _RECEIVE_SHADOWS_ON
-  - _REFLECTIONS_CLASSIC
+  - _REFLECTIONS_NONE
   - _RIMLIGHTINGSTAGE_BEFORELIGHTINGLAST
-  - _RIM_LIGHTING_ON
   - _SHADINGMODEL_PBR
-  - _SPECULARMODEL_TOON
+  - _SPECULARMODEL_NONE
   - _TEXTUREBLENDINGMODE_RGB
   - _USE_WIND_VERTICAL_MASK
   m_InvalidKeywords:
@@ -33,7 +33,6 @@ Material:
   - _COLORRAMPLIGHTINGSTAGE_AFTERLIGHTING
   - _EMISSION
   - _GLITCHWORLDSPACE_ON
-  - _HEIGHTGRADIENTPOSITIONSPACE_LOCAL
   - _HOLOGRAM_ALPHA
   - _REFLECTIONS_BASIC
   - _REFLECTIONS_ON
@@ -187,7 +186,7 @@ Material:
     - _AffectedByLightmaps: 0
     - _AlbedoVertexColorMode: 1
     - _AlbedoVertexColorOn: 0
-    - _AlphaCutoffOn: 1
+    - _AlphaCutoffOn: 0
     - _AlphaCutoffValue: 0.25
     - _AlphaRoundOn: 0
     - _AnisoShininess: 0.85
@@ -260,8 +259,8 @@ Material:
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
     - _HardnessFakeGI: 0.734
-    - _HeightGradientOn: 0
-    - _HeightGradientPositionSpace: 0
+    - _HeightGradientOn: 1
+    - _HeightGradientPositionSpace: 1
     - _HighlightCutoff: 0.068
     - _HighlightSmoothness: 0.5
     - _Highlights: 1
@@ -300,7 +299,7 @@ Material:
     - _MaxCameraDistance: 1000
     - _MaxDistanceToFade: 100
     - _MaxFadeDistance: 250
-    - _MaxGradientHeight: 0.75
+    - _MaxGradientHeight: 0.89
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
@@ -326,11 +325,11 @@ Material:
     - _PosterizeNumColors: 8
     - _RecalculateNormals: 0
     - _ReceiveShadowsOn: 1
-    - _Reflections: 1
+    - _Reflections: 0
     - _ReflectionsAtten: 0.5
     - _RenderPreset: 1
     - _RimAttenuation: 1
-    - _RimLighting: 1
+    - _RimLighting: 0
     - _RimLightingStage: 1
     - _SSSAtten: 1
     - _SSSFrontAtten: 0.3
@@ -345,11 +344,11 @@ Material:
     - _ShakeBlend: 1
     - _ShakeSpeedMult: 1
     - _Shininess: 6.94
-    - _Smoothness: 0.5
+    - _Smoothness: 0.617
     - _SmoothnessTextureChannel: 0
     - _SpecularAtten: 1
     - _SpecularHighlights: 1
-    - _SpecularModel: 2
+    - _SpecularModel: 0
     - _SpecularToonCutoff: 0.836
     - _SpecularToonSmoothness: 0
     - _SpherizeNormals: 0
@@ -396,22 +395,22 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    - _Color: {r: 0.8773585, g: 0.15312389, b: 0.18714836, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeBurnColor: {r: 2.6701567, g: 0.052356016, b: 0, a: 1}
     - _GlitchOffset: {r: -0.5, g: 0, b: 0, a: 0}
-    - _GradientHeightColor01: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _GradientHeightColor01: {r: 0.1, g: 0.1, b: 0.1, a: 1}
     - _GradientHeightColor02: {r: 1, g: 1, b: 1, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _HighlightsColor: {r: 2, g: 2, b: 2, a: 1}
+    - _HighlightsColor: {r: 2.670157, g: 0.49120817, b: 0.49120817, a: 1}
     - _HitColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramColor: {r: 1.25, g: 2.8, b: 6.8, a: 1}
     - _HologramLineDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 0, b: 0, a: 1}
     - _RimOffset: {r: 0, g: 0, b: 0, a: 0}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShakeMaxDisplacement: {r: 0.1, g: 0.1, b: 0.1, a: 0}
