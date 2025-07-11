@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords:
   - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
-  - _CUSTOM_SHADOW_COLOR_ON
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
@@ -218,7 +217,7 @@ Material:
     - _ContrastLM: 1
     - _CullingMode: 2
     - _CustomAmbientLightOn: 0
-    - _CustomShadowColorOn: 1
+    - _CustomShadowColorOn: 0
     - _Cutoff: 0.5
     - _DepthColoringOn: 0
     - _DepthGlowColorIntensity: 25
@@ -284,7 +283,7 @@ Material:
     - _HologramScrollSpeed: 2
     - _HueBrightness: 1.003
     - _HueBrightnessLM: 1
-    - _HueSaturation: 2.02
+    - _HueSaturation: 3.15
     - _HueSaturationLM: 1
     - _HueShift: 0
     - _HueShiftEnabled: 1
@@ -302,7 +301,7 @@ Material:
     - _MaxCameraDistance: 1000
     - _MaxDistanceToFade: 100
     - _MaxFadeDistance: 250
-    - _MaxGradientHeight: 1.25
+    - _MaxGradientHeight: 1.1
     - _MaxInflate: 0.2
     - _MaxRim: 1
     - _Metallic: 0
@@ -398,7 +397,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.6392157, b: 1, a: 1}
+    - _Color: {r: 0.4666667, g: 0.49411768, b: 0.9960785, a: 1}
     - _CustomAmbientColor: {r: 0.65, g: 0.65, b: 0.65, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -413,7 +412,7 @@ Material:
     - _HologramColor: {r: 1.25, g: 2.8, b: 6.8, a: 1}
     - _HologramLineDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.9811321, g: 0.28230685, b: 0.9409697, a: 1}
+    - _RimColor: {r: 0.21226418, g: 0.23864765, b: 1, a: 1}
     - _RimOffset: {r: 0, g: 0, b: 0, a: 0}
     - _SSSColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShakeMaxDisplacement: {r: 0.1, g: 0.1, b: 0.1, a: 0}
