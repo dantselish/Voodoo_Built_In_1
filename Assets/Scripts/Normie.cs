@@ -9,6 +9,7 @@ public class Normie : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float startSpeedSeconds;
     [SerializeField] private float startSpeedMultiplier;
+    [SerializeField] private float gravityMultiplier;
 
     [Space]
     [SerializeField] private bool canDie = true;
@@ -46,7 +47,7 @@ public class Normie : MonoBehaviour
             Ray ray = new Ray(transform.position + Vector3.up * 0.5f, Vector3.down);
             if (!Physics.Raycast(ray, out RaycastHit hit, 100, LayerMask.GetMask("Bridge")))
             {
-                transform.Translate(Vector3.down * 9.8f * Time.deltaTime);
+                transform.Translate(Vector3.down * 9.8f * gravityMultiplier * Time.deltaTime);
             }
             else
             {

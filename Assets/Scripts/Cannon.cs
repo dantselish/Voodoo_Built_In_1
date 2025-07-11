@@ -62,7 +62,7 @@ public class Cannon : MonoBehaviour
     {
         circle.gameObject.SetActive(true);
         circle.transform.localScale = Vector3.zero;
-        circle.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
+        circle.transform.DOScale(Vector3.one * 0.89f, 0.2f).SetEase(Ease.OutBack);
     }
 
     private IEnumerator TravelRoutine()

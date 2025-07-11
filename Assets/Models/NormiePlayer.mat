@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - _ALPHA_CUTOFF_ON
   - _CAST_SHADOWS_ON
+  - _CUSTOM_SHADOW_COLOR_ON
   - _FOG_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
@@ -21,6 +22,7 @@ Material:
   - _HUE_SHIFT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
+  - _MATCAP_ON
   - _OUTLINETYPE_SIMPLE
   - _RECEIVE_SHADOWS_ON
   - _REFLECTIONS_CLASSIC
@@ -217,7 +219,7 @@ Material:
     - _ContrastLM: 1
     - _CullingMode: 2
     - _CustomAmbientLightOn: 0
-    - _CustomShadowColorOn: 0
+    - _CustomShadowColorOn: 1
     - _Cutoff: 0.5
     - _DepthColoringOn: 0
     - _DepthGlowColorIntensity: 25
@@ -294,7 +296,7 @@ Material:
     - _IntersectionGlowOn: 0
     - _LightModel: 1
     - _LightmapColorCorrection: 0
-    - _Matcap: 0
+    - _Matcap: 1
     - _MatcapBlend: 1
     - _MatcapBlendMode: 0
     - _MatcapIntensity: 1

@@ -700,10 +700,12 @@ MonoBehaviour:
   speed: 4.65
   startSpeedSeconds: 0.5
   startSpeedMultiplier: 2
+  gravityMultiplier: 0.65
   canDie: 1
   rb: {fileID: 5675918286720250084}
   animator: {fileID: 6122822810926341213}
   NormieType: 0
+  bridgeMode: 1
 --- !u!54 &5675918286720250084
 Rigidbody:
   m_ObjectHideFlags: 0

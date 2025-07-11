@@ -6,6 +6,7 @@ public class PipeStart : MonoBehaviour
 {
     [SerializeField] private PipeEnd pipeEnd;
     [SerializeField] private AudioSource sound;
+    [SerializeField] private Transform pivot;
 
     private Sequence sequence;
     private Vector3 startScale;
@@ -30,6 +31,11 @@ public class PipeStart : MonoBehaviour
             return;
         }
 
+        if (normie.Killed)
+        {
+            return;
+        }
+
         normie.gameObject.SetActive(false);
         pipeEnd.AddToEnd(normie);
         Instantiate(sound);
@@ -41,12 +47,12 @@ public class PipeStart : MonoBehaviour
         if (sequence.IsActive())
         {
             sequence.Kill();
-            transform.localScale = startScale;
+            pivot.localScale = Vector3.one;
         }
 
         sequence = DOTween.Sequence();
         sequence.SetLoops(2, LoopType.Yoyo);
-        sequence.Append(transform.DOScale(Vector3.one * 189f, 0.2f));
+        sequence.Append(pivot.DOScale(1.25f, 0.1f));
         sequence.Play();
     }
 }

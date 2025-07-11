@@ -301,8 +301,8 @@ Material:
     - _NormalMapEnabled: 0
     - _NormalStrength: 1
     - _OcclusionStrength: 1
-    - _OutlineMode: 8
-    - _OutlineThickness: 2.99
+    - _OutlineMode: 6
+    - _OutlineThickness: 1.5
     - _OutlineType: 1
     - _Parallax: 0.02
     - _Pixelate: 0

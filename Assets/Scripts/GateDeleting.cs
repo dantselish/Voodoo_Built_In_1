@@ -6,10 +6,13 @@ using UnityEngine;
 public class GateDeleting : MonoBehaviour
 {
     [SerializeField] private int divider;
+    [SerializeField] private CanvasGroup redCanvasGroup;
+    [SerializeField] private ParticleSystem particleSystem;
 
     private int _dividerCounter;
     private List<Normie> _triggered = new List<Normie>();
     private Sequence sequence;
+    private Sequence canvasSequence;
     private Vector3 startScale;
 
 
@@ -43,20 +46,32 @@ public class GateDeleting : MonoBehaviour
             normie.Kill();
             HandleTween();
             _dividerCounter = 0;
+            Instantiate(particleSystem, normie.transform.position + Vector3.forward, Quaternion.identity);
         }
     }
 
     private void HandleTween()
     {
-        if (sequence.IsActive())
+        // if (sequence.IsActive())
+        // {
+        //     sequence.Kill();
+        //     transform.localScale = startScale;
+        // }
+        //
+        // sequence = DOTween.Sequence();
+        // sequence.SetLoops(2, LoopType.Yoyo);
+        // sequence.Append(transform.DOScale(Vector3.one * 3.1f, 0.2f));
+        //sequence.Play();
+
+        if (canvasSequence.IsActive())
         {
-            sequence.Kill();
-            transform.localScale = startScale;
+            canvasSequence.Kill();
+            redCanvasGroup.alpha = 0;
         }
 
-        sequence = DOTween.Sequence();
-        sequence.SetLoops(2, LoopType.Yoyo);
-        sequence.Append(transform.DOScale(Vector3.one * 3.1f, 0.2f));
-        sequence.Play();
+        canvasSequence = DOTween.Sequence();
+        canvasSequence.Append(redCanvasGroup.DOFade(0.7f, 0.2f));
+        canvasSequence.SetLoops(2, LoopType.Yoyo);
+        canvasSequence.Play();
     }
 }
