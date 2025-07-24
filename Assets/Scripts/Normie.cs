@@ -20,6 +20,7 @@ public class Normie : MonoBehaviour
 
     private float basicSpeed;
     private Vector3 translateVector = Vector3.zero;
+    private SoundManager _soundManager;
 
     public NormieType NormieType;
     public bool Launched { get; private set; }
@@ -30,7 +31,9 @@ public class Normie : MonoBehaviour
 
     private void Awake()
     {
+        _soundManager = FindAnyObjectByType<SoundManager>();
         basicSpeed = speed;
+        _soundManager.PlayWalking();
     }
 
     private void FixedUpdate()
@@ -100,6 +103,7 @@ public class Normie : MonoBehaviour
             return;
         }
 
+        _soundManager.StopWalking();
         Killed = true;
         if (gameObject)
         {

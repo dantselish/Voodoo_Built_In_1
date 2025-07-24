@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -10,10 +9,12 @@ public class PipeStart : MonoBehaviour
 
     private Sequence sequence;
     private Vector3 startScale;
+    private SoundManager _soundManager;
 
 
     private void Awake()
     {
+        _soundManager = FindAnyObjectByType<SoundManager>();
         startScale = transform.localScale;
     }
 
@@ -38,7 +39,7 @@ public class PipeStart : MonoBehaviour
 
         normie.gameObject.SetActive(false);
         pipeEnd.AddToEnd(normie);
-        Instantiate(sound);
+        _soundManager.PlayPipe();
         HandleTween();
     }
 

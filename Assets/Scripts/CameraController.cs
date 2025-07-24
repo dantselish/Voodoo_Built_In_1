@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        intro.Priority = 20;
+        //intro.Priority = 20;
         start.Priority = 10;
         transition.Priority = 10;
         finish.Priority = 10;
@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
 
     public void Transition()
     {
+        print("Transition");
         transition.Priority = 40;
     }
 

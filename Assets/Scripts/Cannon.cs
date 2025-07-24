@@ -9,15 +9,21 @@ public class Cannon : MonoBehaviour
     [SerializeField] private Normie playerNormiePrefab;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem deathParticle;
+    [SerializeField] private ParticleSystem shotParticle;
+    [SerializeField] private Transform shotParticleTransformPoint;
     [SerializeField] private AudioSource shootSound;
     [SerializeField] private AudioSource deathSound;
     [SerializeField] private Circle circle;
+    [SerializeField] private Transform levelZPosTransform;
 
     [Space]
     [SerializeField] private float speed;
     [SerializeField] private float travelSpeed;
     [SerializeField] private float coordinateBorder;
     [SerializeField] private float shootInterval;
+
+    [Space]
+    [SerializeField] private bool startWithBridge;
 
     private float _horizontalInput;
 
@@ -29,6 +35,13 @@ public class Cannon : MonoBehaviour
 
     private void Start()
     {
+        if (!startWithBridge)
+        {
+            FindAnyObjectByType<EnemyBase>().WokeUp = true;
+            transform.position = levelZPosTransform.position;
+            FindAnyObjectByType<CameraController>().StartCamera();
+            StartCoroutine(ChangeToFinishCameraAfter(4));
+        }
         animator.Play("Start");
         Invoke(nameof(EnableCircle), 1.267f);
     }
@@ -150,6 +163,7 @@ public class Cannon : MonoBehaviour
         animator.SetTrigger("Shoot");
         animator.SetBool("Shooting", true);
         Instantiate(shootSound);
+        Instantiate(shotParticle, shotParticleTransformPoint.position, quaternion.identity);
         _shootCooldownTimer = shootInterval;
     }
 
@@ -164,5 +178,11 @@ public class Cannon : MonoBehaviour
         animator.SetBool("Shooting", true);
         Instantiate(shootSound);
         _shootCooldownTimer = shootInterval;
+    }
+
+    private IEnumerator ChangeToFinishCameraAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        FindAnyObjectByType<CameraController>().Finish();
     }
 }

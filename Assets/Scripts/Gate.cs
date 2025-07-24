@@ -14,10 +14,12 @@ public class Gate : MonoBehaviour
     private List<Normie> _triggered = new List<Normie>();
     private Sequence sequence;
     private Vector3 startScale;
+    private SoundManager _soundManager;
 
 
     private void Awake()
     {
+        _soundManager = FindAnyObjectByType<SoundManager>();
         startScale = transform.localScale;
     }
 
@@ -79,7 +81,7 @@ public class Gate : MonoBehaviour
         sequence.SetLoops(2, LoopType.Yoyo);
         sequence.Append(transform.DOScale(Vector3.one * 3.1f, 0.2f));
         sequence.Play();
-        Instantiate(sound);
+        _soundManager.PlayMultiply();
     }
 }
 

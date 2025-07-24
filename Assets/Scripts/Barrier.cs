@@ -20,12 +20,14 @@ public class Barrier : MonoBehaviour
     private Sequence sequence;
     private Color startColor;
     private Vector3 startScale;
+    private SoundManager _soundManager;
 
     private int _hp;
 
 
     private void Awake()
     {
+        _soundManager = FindAnyObjectByType<SoundManager>();
         _hp = maxHp;
         text.SetText(maxHp.ToString());
 
@@ -51,7 +53,7 @@ public class Barrier : MonoBehaviour
         normie.Kill();
         --_hp;
         text.SetText(_hp.ToString());
-        Instantiate(sound);
+        _soundManager.PlayBarrier();
         HandleSequence();
     }
 

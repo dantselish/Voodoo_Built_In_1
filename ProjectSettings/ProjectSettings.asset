@@ -757,7 +757,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     ReservedCFE: DOTWEEN
-    Standalone: ALLIN13DSHADER_BIRP;DOTWEEN
+    Standalone: DOTWEEN;ALLIN13DSHADER_BIRP
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
