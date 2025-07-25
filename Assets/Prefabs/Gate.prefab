@@ -106,6 +106,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 6166312666557032994, guid: 532d455d9c3db624fbd95274d38ccbc5, type: 3}
   enemyPrefab: {fileID: 2752924707770838011, guid: 36127d7be17bba442ad9411416447487, type: 3}
   particle: {fileID: 198825297873863668, guid: 6e3db7afa59301e48bc3999ec41f1410, type: 3}
+  plusParticle: {fileID: 8456251305707038649, guid: 6685aca3d31e39847a7d171b0cfdbf4e, type: 3}
   sound: {fileID: 0}
   multiplier: 2
 --- !u!65 &7350493609808647486
