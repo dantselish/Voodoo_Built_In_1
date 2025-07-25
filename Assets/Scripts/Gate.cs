@@ -7,6 +7,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private Normie playerPrefab;
     [SerializeField] private Normie enemyPrefab;
     [SerializeField] private ParticleSystem particle;
+    [SerializeField] private ParticleSystem plusParticle;
     [SerializeField] private AudioSource sound;
 
     public float multiplier;
@@ -63,9 +64,15 @@ public class Gate : MonoBehaviour
         Normie newNormie = Instantiate(type == NormieType.Player ? playerPrefab : enemyPrefab, spawnPosition, originTransform.rotation);
         _triggered.Add(newNormie);
         HandleTween();
+
         if (particle != null)
         {
             Instantiate(particle, spawnPosition + Vector3.up * 0.5f + Vector3.forward * 1f, Quaternion.identity);
+        }
+
+        if (plusParticle)
+        {
+            Instantiate(plusParticle, spawnPosition + Vector3.up * 0.5f, Quaternion.identity);
         }
     }
 

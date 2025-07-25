@@ -16,7 +16,6 @@ Material:
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_WORLD
-  - _HEIGHT_GRADIENT_ON
   - _LIGHTMODEL_CLASSIC
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_NONE
@@ -108,7 +107,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 61607161eb9e281438630d3968f8f69c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 93ea19c7d0848ed47806cc339c1b1536, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatcapTex:
@@ -245,7 +244,7 @@ Material:
     - _HandDrawnAmount: 10
     - _HandDrawnSpeed: 5
     - _HardnessFakeGI: 0.75
-    - _HeightGradientOn: 1
+    - _HeightGradientOn: 0
     - _HeightGradientPositionSpace: 1
     - _HighlightCutoff: 0.5
     - _HighlightSmoothness: 0.5
@@ -378,7 +377,7 @@ Material:
     - _WindVerticalMaskMaxY: 1
     - _WindVerticalMaskMinY: -1
     - _ZTestMode: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
